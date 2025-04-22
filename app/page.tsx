@@ -1,24 +1,43 @@
-export default function Home() {
+// app/page.tsx (or similar location in your Next.js app)
+
+import React from 'react';
+import './styles.css'; // Make sure to import your CSS file or use global styles
+
+const LandingPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-white text-gray-800">
-      <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">Welcome to Stacked</h1>
-      <p className="text-lg sm:text-xl text-center max-w-2xl mb-10">
-        Stacked is your all-in-one lead management and deal analysis tool, built to help real estate pros like you stay organized, close deals faster, and save time.
-      </p>
-      <div className="flex gap-4 flex-col sm:flex-row">
-        <a
-          href="mailto:your@email.com"
-          className="bg-black text-white px-6 py-3 rounded-full text-lg hover:bg-gray-800 transition"
-        >
-          Contact Us
-        </a>
-        <a
-          href="#"
-          className="border border-black px-6 py-3 rounded-full text-lg hover:bg-gray-100 transition"
-        >
-          Learn More
-        </a>
-      </div>
+    <div className="landing-page">
+      <header className="hero">
+        <h1>Welcome to Stacked</h1>
+        <p>Your next-level lead management solution.</p>
+        <button className="cta-button">Get Started</button>
+      </header>
+
+      <section className="features">
+        <h2>Key Features</h2>
+        <div className="feature">
+          <h3>Lead Management</h3>
+          <p>Efficiently track, organize, and manage your leads from start to finish.</p>
+        </div>
+        <div className="feature">
+          <h3>Deal Analysis</h3>
+          <p>Powerful tools to analyze real estate deals and maximize your profits.</p>
+        </div>
+        <div className="feature">
+          <h3>Customizable Dashboards</h3>
+          <p>Tailor your dashboard to fit your workflow and get insights fast.</p>
+        </div>
+      </section>
+
+      <section className="testimonial">
+        <h2>What Our Users Say</h2>
+        <blockquote>"Stacked has transformed how we handle our leads and deals. A must-have for any real estate professional!" - Real Estate Pro</blockquote>
+      </section>
+
+      <footer className="footer">
+        <p>&copy; 2025 Stacked. All Rights Reserved.</p>
+      </footer>
     </div>
   );
-}
+};
+
+export default LandingPage;
